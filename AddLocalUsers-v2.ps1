@@ -30,7 +30,7 @@ $LogFile = "$Path\Log.log"
 # Q.5.3 (Suppression du Header et du Skip -2 pour prise en compte création du 1er user)
 # Q.5.5 (Modification pour que seul les champs utilisés soient importés : Select-Object -Property prenom, nom, description, fonction)
 $Users = Import-Csv -Path $CsvFile -Delimiter ";" `
-    -Encoding UTF8 | Select-Object - Skip1 -Property prenom, nom, description, fonction 
+    -Encoding UTF8 | Select-Object -Property prenom, nom, description, fonction 
 
 foreach ($User in $Users)
 {
